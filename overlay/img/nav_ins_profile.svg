@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 380" width="750" height="380">
+  <defs>
+    <marker id="ni-arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#1a1a1a"/></marker>
+    <marker id="ni-arr-g" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#556b2f"/></marker>
+    <pattern id="ni-gh" patternUnits="userSpaceOnUse" width="8" height="8" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="8" stroke="#b8956a" stroke-width="1"/></pattern>
+  </defs>
+  <rect width="750" height="380" fill="#f5f0e1" rx="2"/>
+  <text x="375" y="22" text-anchor="middle" font-family="Impact,Arial Black,sans-serif" font-size="14" fill="#3b4a20" letter-spacing="3">NAV / INS ALIGNMENT - PROCEDURE</text>
+
+  <!-- Ground -->
+  <rect x="0" y="290" width="750" height="90" fill="url(#ni-gh)" opacity="0.3"/>
+  <line x1="0" y1="290" x2="750" y2="290" stroke="#5c4033" stroke-width="2"/>
+  <text x="25" y="310" font-family="Courier New,monospace" font-size="9" fill="#5c4033" letter-spacing="1">RAMP / PARKING</text>
+
+  <!-- F-4E on ground -->
+  <g transform="translate(100,278)">
+    <polygon points="-15,0 0,-5 15,0 0,3" fill="#3b4a20" stroke="#1a1a1a" stroke-width="1" transform="scale(2)"/>
+  </g>
+  <text x="100" y="265" text-anchor="middle" font-family="Courier New,monospace" font-size="8" fill="#3b4a20" font-weight="bold">F-4E (STATIONARY)</text>
+
+  <!-- STATIONARY warning -->
+  <g transform="translate(40,250)">
+    <rect x="0" y="0" width="120" height="14" rx="2" fill="rgba(139,0,0,0.15)" stroke="#8b0000" stroke-width="1"/>
+    <text x="60" y="11" text-anchor="middle" font-family="Courier New,monospace" font-size="7" fill="#8b0000" font-weight="bold">DO NOT MOVE A/C</text>
+  </g>
+
+  <!-- Alignment Timeline -->
+  <line x1="170" y1="190" x2="680" y2="190" stroke="#1a1a1a" stroke-width="2" marker-end="url(#ni-arr)"/>
+  <text x="170" y="183" font-family="Courier New,monospace" font-size="8" fill="#1a1a1a" font-weight="bold">ALIGNMENT TIMELINE</text>
+
+  <!-- STBY Phase -->
+  <g transform="translate(180,198)">
+    <rect x="0" y="0" width="80" height="18" rx="2" fill="#4a5068"/>
+    <text x="40" y="13" text-anchor="middle" font-family="Courier New,monospace" font-size="7.5" fill="#fff" font-weight="bold">STBY/HEAT</text>
+  </g>
+  <line x1="220" y1="216" x2="220" y2="265" stroke="#4a5068" stroke-width="1" stroke-dasharray="3,2"/>
+  <g transform="translate(180,225)">
+    <text x="0" y="0" font-family="Courier New,monospace" font-size="7" fill="#4a5068">INS: OFF→STBY</text>
+    <text x="0" y="10" font-family="Courier New,monospace" font-size="7" fill="#4a5068">HEAT light ON</text>
+    <text x="0" y="20" font-family="Courier New,monospace" font-size="7" fill="#4a5068">~110 sec wait</text>
+  </g>
+
+  <!-- Timing marker: 110 sec -->
+  <line x1="280" y1="186" x2="280" y2="198" stroke="#4a5068" stroke-width="1.5"/>
+  <text x="280" y="182" text-anchor="middle" font-family="Courier New,monospace" font-size="6.5" fill="#4a5068">~110s</text>
+
+  <!-- BATH ALIGN Phase -->
+  <g transform="translate(290,198)">
+    <rect x="0" y="0" width="90" height="18" rx="2" fill="#2f4f4f"/>
+    <text x="45" y="13" text-anchor="middle" font-family="Courier New,monospace" font-size="7.5" fill="#fff" font-weight="bold">BATH ALIGN</text>
+  </g>
+  <line x1="335" y1="216" x2="335" y2="265" stroke="#2f4f4f" stroke-width="1" stroke-dasharray="3,2"/>
+  <g transform="translate(293,225)">
+    <text x="0" y="0" font-family="Courier New,monospace" font-size="7" fill="#2f4f4f">INS: STBY→ALIGN</text>
+    <text x="0" y="10" font-family="Courier New,monospace" font-size="7" fill="#2f4f4f">ALIGN light STEADY</text>
+    <text x="0" y="20" font-family="Courier New,monospace" font-size="7" fill="#2f4f4f">5.5 NM/hr CEP</text>
+  </g>
+
+  <!-- Timing marker: 75 sec -->
+  <line x1="400" y1="186" x2="400" y2="198" stroke="#2f4f4f" stroke-width="1.5"/>
+  <text x="400" y="182" text-anchor="middle" font-family="Courier New,monospace" font-size="6.5" fill="#2f4f4f">~75s</text>
+
+  <!-- GYROCOMPASS Phase -->
+  <g transform="translate(410,198)">
+    <rect x="0" y="0" width="120" height="18" rx="2" fill="#4a3728"/>
+    <text x="60" y="13" text-anchor="middle" font-family="Courier New,monospace" font-size="7.5" fill="#fff" font-weight="bold">GYROCOMPASS</text>
+  </g>
+  <line x1="470" y1="216" x2="470" y2="265" stroke="#4a3728" stroke-width="1" stroke-dasharray="3,2"/>
+  <g transform="translate(415,225)">
+    <text x="0" y="0" font-family="Courier New,monospace" font-size="7" fill="#4a3728">Refining heading</text>
+    <text x="0" y="10" font-family="Courier New,monospace" font-size="7" fill="#4a3728">ALIGN light FLASH</text>
+    <text x="0" y="20" font-family="Courier New,monospace" font-size="7" fill="#4a3728">3.0 NM/hr CEP</text>
+  </g>
+
+  <!-- Timing marker: ~5 min -->
+  <line x1="550" y1="186" x2="550" y2="198" stroke="#4a3728" stroke-width="1.5"/>
+  <text x="550" y="182" text-anchor="middle" font-family="Courier New,monospace" font-size="6.5" fill="#4a3728">~5 min</text>
+
+  <!-- NAV READY Phase -->
+  <g transform="translate(560,198)">
+    <rect x="0" y="0" width="100" height="18" rx="2" fill="#4a5d23"/>
+    <text x="50" y="13" text-anchor="middle" font-family="Courier New,monospace" font-size="7.5" fill="#fff" font-weight="bold">NAV READY</text>
+  </g>
+  <g transform="translate(565,225)">
+    <text x="0" y="0" font-family="Courier New,monospace" font-size="7" fill="#4a5d23">INS: ALIGN→NAV</text>
+    <text x="0" y="10" font-family="Courier New,monospace" font-size="7" fill="#4a5d23">Verify HSI/BDHI</text>
+    <text x="0" y="20" font-family="Courier New,monospace" font-size="7" fill="#4a5d23">System ready</text>
+  </g>
+
+  <!-- TACAN station (right side) -->
+  <g transform="translate(640,100)">
+    <!-- Tower icon -->
+    <line x1="0" y1="0" x2="0" y2="50" stroke="#4a3728" stroke-width="2"/>
+    <polygon points="-8,0 8,0 5,-20 -5,-20" fill="#4a3728" opacity="0.5" stroke="#4a3728" stroke-width="1"/>
+    <line x1="-12" y1="50" x2="12" y2="50" stroke="#4a3728" stroke-width="2"/>
+    <text x="0" y="64" text-anchor="middle" font-family="Courier New,monospace" font-size="8" fill="#4a3728" font-weight="bold">TACAN</text>
+    <text x="0" y="73" text-anchor="middle" font-family="Courier New,monospace" font-size="7" fill="#4a3728">CH 1-126</text>
+    <text x="0" y="82" text-anchor="middle" font-family="Courier New,monospace" font-size="7" fill="#4a3728">X/Y Band</text>
+  </g>
+  <!-- Bearing line from aircraft to TACAN -->
+  <line x1="130" y1="275" x2="630" y2="130" stroke="#4a3728" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="400" y="195" font-family="Courier New,monospace" font-size="7" fill="#4a3728" font-weight="bold" transform="rotate(-16,400,195)">BRG / RNG (up to 390 NM)</text>
+
+  <!-- Alignment accuracy comparison box -->
+  <g transform="translate(40,45)">
+    <rect x="0" y="0" width="250" height="70" rx="2" fill="rgba(47,79,79,0.08)" stroke="#2f4f4f" stroke-width="1"/>
+    <text x="125" y="15" text-anchor="middle" font-family="Courier New,monospace" font-size="8.5" fill="#2f4f4f" font-weight="bold">ALIGNMENT ACCURACY</text>
+    <text x="10" y="30" font-family="Courier New,monospace" font-size="7" fill="#2f4f4f">BATH ............ 5.5 NM/hr CEP (~75s)</text>
+    <text x="10" y="42" font-family="Courier New,monospace" font-size="7" fill="#2f4f4f">STORED HDG ...... 3.0 NM/hr CEP (~2min)</text>
+    <text x="10" y="54" font-family="Courier New,monospace" font-size="7" fill="#2f4f4f">GYROCOMPASS ..... 3.0 NM/hr CEP (~5min)</text>
+    <text x="10" y="65" font-family="Courier New,monospace" font-size="6.5" fill="#2f4f4f" font-style="italic">Stored HDG requires prior alignment data</text>
+  </g>
+
+  <!-- Position entry box -->
+  <g transform="translate(320,45)">
+    <rect x="0" y="0" width="200" height="55" rx="2" fill="rgba(85,107,47,0.1)" stroke="#556b2f" stroke-width="1"/>
+    <text x="100" y="15" text-anchor="middle" font-family="Courier New,monospace" font-size="8.5" fill="#556b2f" font-weight="bold">POSITION ENTRY</text>
+    <text x="10" y="28" font-family="Courier New,monospace" font-size="7" fill="#556b2f">Latitude / Longitude</text>
+    <text x="10" y="38" font-family="Courier New,monospace" font-size="7" fill="#556b2f">Magnetic Variation</text>
+    <text x="10" y="48" font-family="Courier New,monospace" font-size="7" fill="#556b2f">Wind Direction / Speed</text>
+  </g>
+
+  <!-- Compass rose (simplified) -->
+  <g transform="translate(100,130)">
+    <circle cx="0" cy="0" r="30" stroke="#556b2f" stroke-width="1" fill="rgba(85,107,47,0.05)"/>
+    <line x1="0" y1="-30" x2="0" y2="30" stroke="#556b2f" stroke-width="0.5"/>
+    <line x1="-30" y1="0" x2="30" y2="0" stroke="#556b2f" stroke-width="0.5"/>
+    <text x="0" y="-34" text-anchor="middle" font-family="Courier New,monospace" font-size="7" fill="#556b2f" font-weight="bold">N</text>
+    <text x="35" y="3" text-anchor="middle" font-family="Courier New,monospace" font-size="7" fill="#556b2f">E</text>
+    <text x="0" y="42" text-anchor="middle" font-family="Courier New,monospace" font-size="7" fill="#556b2f">S</text>
+    <text x="-35" y="3" text-anchor="middle" font-family="Courier New,monospace" font-size="7" fill="#556b2f">W</text>
+    <!-- Heading needle -->
+    <line x1="0" y1="0" x2="0" y2="-25" stroke="#8b0000" stroke-width="1.5"/>
+    <polygon points="0,-25 -3,-20 3,-20" fill="#8b0000"/>
+    <text x="0" y="52" text-anchor="middle" font-family="Courier New,monospace" font-size="7" fill="#556b2f" font-weight="bold">HDG REF</text>
+  </g>
+
+  <!-- Legend -->
+  <g transform="translate(40,320)">
+    <rect x="0" y="0" width="220" height="30" rx="2" fill="#f5f0e1" stroke="#b8956a" stroke-width="1"/>
+    <rect x="10" y="8" width="16" height="8" rx="1" fill="#2f4f4f"/>
+    <text x="35" y="15" font-family="Courier New,monospace" font-size="7.5" fill="#2f4f4f">ALIGNMENT PHASE</text>
+    <line x1="120" y1="12" x2="140" y2="12" stroke="#4a3728" stroke-width="1.5" stroke-dasharray="6,4"/>
+    <text x="145" y="15" font-family="Courier New,monospace" font-size="7.5" fill="#4a3728">TACAN BEARING</text>
+  </g>
+
+  <!-- Border -->
+  <rect x="1" y="1" width="748" height="378" rx="2" fill="none" stroke="#b8956a" stroke-width="2"/>
+</svg>

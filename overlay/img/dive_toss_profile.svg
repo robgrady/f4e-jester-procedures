@@ -1,0 +1,172 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 380" width="750" height="380">
+  <defs>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#1a1a1a"/>
+    </marker>
+    <marker id="arrowhead-red" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#8b0000"/>
+    </marker>
+    <marker id="arrowhead-olive" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#556b2f"/>
+    </marker>
+    <!-- Ground pattern -->
+    <pattern id="ground-hatch" patternUnits="userSpaceOnUse" width="8" height="8" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#b8956a" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="750" height="380" fill="#f5f0e1" rx="2"/>
+
+  <!-- Title -->
+  <text x="375" y="22" text-anchor="middle" font-family="Impact, Arial Black, sans-serif"
+        font-size="14" fill="#3b4a20" letter-spacing="3">DIVE TOSS (DT) - ATTACK PROFILE</text>
+
+  <!-- Ground -->
+  <rect x="0" y="310" width="750" height="70" fill="url(#ground-hatch)" opacity="0.3"/>
+  <line x1="0" y1="310" x2="750" y2="310" stroke="#5c4033" stroke-width="2"/>
+
+  <!-- Ground labels -->
+  <text x="25" y="335" font-family="Courier New, monospace" font-size="9" fill="#5c4033"
+        letter-spacing="1">TERRAIN</text>
+
+  <!-- Target -->
+  <g transform="translate(420, 295)">
+    <!-- Target crosshair -->
+    <line x1="-12" y1="0" x2="12" y2="0" stroke="#8b0000" stroke-width="2"/>
+    <line x1="0" y1="-12" x2="0" y2="12" stroke="#8b0000" stroke-width="2"/>
+    <circle cx="0" cy="0" r="8" stroke="#8b0000" stroke-width="1.5" fill="none"/>
+    <circle cx="0" cy="0" r="3" fill="#8b0000"/>
+    <!-- Target label -->
+    <text x="0" y="28" text-anchor="middle" font-family="Impact, Arial Black, sans-serif"
+          font-size="11" fill="#8b0000" letter-spacing="1">TARGET</text>
+  </g>
+
+  <!-- Aircraft approach path (level ingress) -->
+  <line x1="60" y1="95" x2="220" y2="95" stroke="#1a1a1a" stroke-width="2"
+        stroke-dasharray="8,4" marker-end="url(#arrowhead)"/>
+
+  <!-- Aircraft symbol at start of dive -->
+  <g transform="translate(230, 90) rotate(0)">
+    <polygon points="-15,0 0,-5 15,0 0,3" fill="#3b4a20" stroke="#1a1a1a" stroke-width="1"/>
+  </g>
+
+  <!-- Dive path -->
+  <line x1="245" y1="95" x2="405" y2="240" stroke="#1a1a1a" stroke-width="2.5"
+        marker-end="url(#arrowhead)"/>
+
+  <!-- Dive angle annotation -->
+  <path d="M 270 95 A 40 40 0 0 1 285 115" stroke="#556b2f" stroke-width="1.5" fill="none"/>
+  <text x="295" y="115" font-family="Courier New, monospace" font-size="10" fill="#556b2f"
+        font-weight="bold">30-45 DEG</text>
+
+  <!-- Altitude annotation (left side) -->
+  <line x1="80" y1="95" x2="80" y2="310" stroke="#556b2f" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="75" y1="95" x2="85" y2="95" stroke="#556b2f" stroke-width="1.5"/>
+  <line x1="75" y1="310" x2="85" y2="310" stroke="#556b2f" stroke-width="1.5"/>
+  <text x="72" y="205" text-anchor="end" font-family="Courier New, monospace" font-size="9"
+        fill="#556b2f" transform="rotate(-90, 72, 205)">8,000-12,000 FT AGL</text>
+
+  <!-- Radar beam cone from aircraft to ground -->
+  <polygon points="370,220 400,300 440,300" fill="rgba(74,55,40,0.12)"
+           stroke="#4a3728" stroke-width="1" stroke-dasharray="4,2"/>
+  <text x="335" y="255" font-family="Courier New, monospace" font-size="8.5" fill="#4a3728"
+        font-weight="bold">RADAR</text>
+  <text x="335" y="266" font-family="Courier New, monospace" font-size="8.5" fill="#4a3728"
+        font-weight="bold">LOCK</text>
+
+  <!-- Bomb button press point -->
+  <g transform="translate(370, 215)">
+    <circle cx="0" cy="0" r="5" fill="#8b0000"/>
+    <line x1="8" y1="-3" x2="45" y2="-25" stroke="#8b0000" stroke-width="1"/>
+    <text x="48" y="-27" font-family="Courier New, monospace" font-size="8.5" fill="#8b0000"
+          font-weight="bold">PRESS &amp; HOLD</text>
+    <text x="48" y="-17" font-family="Courier New, monospace" font-size="8.5" fill="#8b0000"
+          font-weight="bold">BOMB BUTTON</text>
+  </g>
+
+  <!-- Pull-up arc -->
+  <path d="M 405 240 Q 440 270 470 240 Q 510 200 540 170"
+        stroke="#1a1a1a" stroke-width="2.5" fill="none" marker-end="url(#arrowhead)"/>
+
+  <!-- Aircraft symbol at pullout -->
+  <g transform="translate(540, 165) rotate(-20)">
+    <polygon points="-15,0 0,-5 15,0 0,3" fill="#3b4a20" stroke="#1a1a1a" stroke-width="1"/>
+  </g>
+
+  <!-- Pull-up annotation -->
+  <text x="490" y="197" font-family="Courier New, monospace" font-size="8.5" fill="#1a1a1a"
+        font-weight="bold">GENTLE</text>
+  <text x="490" y="208" font-family="Courier New, monospace" font-size="8.5" fill="#1a1a1a"
+        font-weight="bold">PULLOUT</text>
+
+  <!-- Bomb release point -->
+  <g transform="translate(445, 255)">
+    <circle cx="0" cy="0" r="5" fill="#556b2f"/>
+    <line x1="6" y1="3" x2="60" y2="10" stroke="#556b2f" stroke-width="1"/>
+    <text x="63" y="8" font-family="Courier New, monospace" font-size="8.5" fill="#556b2f"
+          font-weight="bold">AUTO RELEASE</text>
+    <text x="63" y="18" font-family="Courier New, monospace" font-size="8.5" fill="#556b2f"
+          font-weight="bold">(WRCS COMPUTED)</text>
+  </g>
+
+  <!-- Bomb trajectory (ballistic arc) -->
+  <path d="M 445 260 Q 455 280 448 295 Q 440 305 425 308"
+        stroke="#8b0000" stroke-width="2" stroke-dasharray="5,3" fill="none"
+        marker-end="url(#arrowhead-red)"/>
+
+  <!-- Bomb symbols along trajectory -->
+  <ellipse cx="450" cy="275" rx="3" ry="5" fill="#8b0000" transform="rotate(15, 450, 275)"/>
+  <ellipse cx="447" cy="290" rx="3" ry="5" fill="#8b0000" transform="rotate(5, 447, 290)"/>
+
+  <!-- Egress path -->
+  <line x1="555" y1="160" x2="680" y2="110" stroke="#1a1a1a" stroke-width="2"
+        stroke-dasharray="8,4" marker-end="url(#arrowhead)"/>
+
+  <!-- Egress label -->
+  <text x="660" y="98" font-family="Courier New, monospace" font-size="9" fill="#1a1a1a"
+        font-weight="bold">EGRESS</text>
+
+  <!-- HUD steering cues annotation -->
+  <g transform="translate(540, 120)">
+    <rect x="-52" y="-14" width="104" height="28" rx="2" fill="rgba(85,107,47,0.1)"
+          stroke="#556b2f" stroke-width="1"/>
+    <text x="0" y="-2" text-anchor="middle" font-family="Courier New, monospace" font-size="8"
+          fill="#556b2f" font-weight="bold">STEERING CUES</text>
+    <text x="0" y="9" text-anchor="middle" font-family="Courier New, monospace" font-size="8"
+          fill="#556b2f" font-weight="bold">ON HUD</text>
+  </g>
+
+  <!-- Ingress label -->
+  <text x="120" y="82" font-family="Courier New, monospace" font-size="9" fill="#1a1a1a"
+        font-weight="bold">INGRESS</text>
+  <text x="120" y="93" font-family="Courier New, monospace" font-size="8" fill="#1a1a1a">
+    450-550 KTAS</text>
+
+  <!-- Min pullout altitude line -->
+  <line x1="350" y1="265" x2="520" y2="265" stroke="#8b0000" stroke-width="1"
+        stroke-dasharray="3,3"/>
+  <text x="525" y="288" font-family="Courier New, monospace" font-size="7.5" fill="#8b0000">
+    MIN PULLOUT ALT</text>
+  <text x="525" y="298" font-family="Courier New, monospace" font-size="7.5" fill="#8b0000">
+    ~3,000 FT AGL</text>
+
+  <!-- Legend box -->
+  <g transform="translate(580, 330)">
+    <rect x="0" y="0" width="155" height="42" rx="2" fill="var(--cream, #f5f0e1)"
+          stroke="#b8956a" stroke-width="1"/>
+    <line x1="10" y1="12" x2="30" y2="12" stroke="#1a1a1a" stroke-width="2"/>
+    <text x="35" y="15" font-family="Courier New, monospace" font-size="7.5" fill="#1a1a1a">
+      FLIGHT PATH</text>
+    <line x1="10" y1="26" x2="30" y2="26" stroke="#8b0000" stroke-width="2" stroke-dasharray="5,3"/>
+    <text x="35" y="29" font-family="Courier New, monospace" font-size="7.5" fill="#8b0000">
+      BOMB TRAJECTORY</text>
+    <polygon points="10,37 20,34 10,40" fill="rgba(74,55,40,0.3)" stroke="#4a3728" stroke-width="0.5"/>
+    <text x="35" y="41" font-family="Courier New, monospace" font-size="7.5" fill="#4a3728">
+      RADAR BEAM</text>
+  </g>
+
+  <!-- Border -->
+  <rect x="1" y="1" width="748" height="378" rx="2" fill="none"
+        stroke="#b8956a" stroke-width="2"/>
+</svg>

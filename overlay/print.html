@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>F-4E PHANTOM II - COMBAT PROCEDURES KNEEBOARD</title>
+  <style>
+    @page {
+      size: Letter portrait;
+      margin: 0.5in 0.5in 0.4in 0.5in;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --tan:          #d2b48c;
+      --tan-light:    #e8d5b7;
+      --tan-dark:     #b8956a;
+      --olive:        #556b2f;
+      --olive-dark:   #3b4a20;
+      --dark-green:   #2f4f2f;
+      --brown:        #5c4033;
+      --khaki:        #c3b091;
+      --cream:        #f5f0e1;
+      --paper:        #ede4d0;
+      --ink:          #1a1a1a;
+      --ink-light:    #3d3d3d;
+      --red-accent:   #8b0000;
+      --amber:        #d4a017;
+      --blue-steel:   #4a6670;
+      --font-mono:    'Courier New', 'Liberation Mono', 'Courier', monospace;
+      --font-stencil: 'Impact', 'Arial Black', 'Helvetica', sans-serif;
+    }
+
+    body {
+      font-family: var(--font-mono);
+      color: var(--ink);
+      background: var(--paper);
+      font-size: 10pt;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    /* ---- Page Layout ---- */
+    .procedure-page {
+      width: 100%;
+      page-break-after: always;
+      break-after: page;
+      padding: 0.25rem 0.6rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .procedure-page:last-child {
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+
+    /* ---- Page Header ---- */
+    .page-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--olive-dark);
+      color: var(--tan);
+      padding: 0.35rem 0.6rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .page-header-left {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .mode-badge {
+      font-family: var(--font-stencil);
+      font-size: 7pt;
+      padding: 0.1rem 0.45rem;
+      background: var(--olive);
+      color: var(--tan-light);
+      letter-spacing: 0.12em;
+      border-radius: 2px;
+      white-space: nowrap;
+    }
+
+    .page-title {
+      font-family: var(--font-stencil);
+      font-size: 16pt;
+      letter-spacing: 0.08em;
+      color: var(--tan-light);
+    }
+
+    .header-short-name {
+      font-family: var(--font-stencil);
+      font-size: 14pt;
+      color: var(--tan);
+      letter-spacing: 0.1em;
+      opacity: 0.7;
+    }
+
+    /* ---- Description ---- */
+    .page-description {
+      font-size: 8pt;
+      color: var(--ink-light);
+      line-height: 1.45;
+      padding: 0.2rem 0;
+      border-bottom: 1px solid var(--tan-dark);
+      margin-bottom: 0.3rem;
+    }
+
+    .delivery-knob-info {
+      font-size: 7pt;
+      color: var(--brown);
+      font-style: italic;
+      margin-top: 0.1rem;
+    }
+
+    /* ---- Section Headings ---- */
+    .section-heading {
+      font-family: var(--font-stencil);
+      font-size: 8pt;
+      color: var(--olive-dark);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      border-bottom: 2px solid var(--tan-dark);
+      padding-bottom: 0.15rem;
+      margin-bottom: 0.25rem;
+      margin-top: 0.35rem;
+    }
+
+    /* ---- SVG Diagram ---- */
+    .svg-wrapper {
+      background: var(--cream);
+      border: 1px solid var(--tan-dark);
+      padding: 0.2rem;
+      text-align: center;
+      margin-bottom: 0.2rem;
+    }
+
+    .svg-wrapper svg {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    /* ---- Profile Parameters ---- */
+    .profile-params-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.2rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .profile-param {
+      font-size: 6.5pt;
+      padding: 0.1rem 0.35rem;
+      background: var(--paper);
+      border: 1px solid var(--tan-dark);
+      border-left: 3px solid var(--olive);
+    }
+
+    .profile-param-label {
+      color: var(--olive-dark);
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 5.5pt;
+      letter-spacing: 0.05em;
+    }
+
+    .profile-param-value {
+      color: var(--ink);
+      font-size: 6.5pt;
+    }
+
+    /* ---- Checklist Table ---- */
+    .checklist-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 7.5pt;
+      margin-bottom: 0.3rem;
+    }
+
+    .checklist-table th {
+      font-size: 6pt;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--olive-dark);
+      background: var(--tan-light);
+      border-bottom: 2px solid var(--tan-dark);
+      padding: 0.15rem 0.3rem;
+      text-align: left;
+    }
+
+    .checklist-table td {
+      padding: 0.15rem 0.3rem;
+      border-bottom: 1px solid var(--tan);
+      vertical-align: middle;
+    }
+
+    .col-step   { width: 20px; text-align: center; font-size: 6.5pt; }
+    .col-system { width: 50px; }
+    .col-action { width: 42%; }
+    .col-setting { /* auto */ }
+    .col-crew   { width: 32px; text-align: center; }
+
+    .sys-badge {
+      font-size: 5.5pt;
+      font-weight: bold;
+      padding: 0.05rem 0.2rem;
+      border-radius: 2px;
+      letter-spacing: 0.05em;
+      display: inline-block;
+      white-space: nowrap;
+    }
+
+    .crew-badge { font-size: 6pt; font-weight: bold; letter-spacing: 0.05em; }
+    .crew-badge.plt  { color: var(--blue-steel); }
+    .crew-badge.wso  { color: var(--red-accent); }
+    .crew-badge.auto { color: var(--olive-dark); }
+
+    /* ---- Execution List ---- */
+    .execution-list { list-style: none; margin-bottom: 0.3rem; }
+
+    .execution-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.3rem;
+      padding: 0.15rem 0;
+      border-bottom: 1px solid var(--tan);
+      font-size: 7.5pt;
+    }
+
+    .execution-item:last-child { border-bottom: none; }
+
+    .exec-num {
+      flex-shrink: 0;
+      width: 16px; height: 16px;
+      background: var(--olive-dark);
+      color: var(--tan);
+      font-size: 6pt;
+      font-weight: bold;
+      display: flex; align-items: center; justify-content: center;
+      border-radius: 50%;
+    }
+
+    .exec-phase {
+      flex-shrink: 0;
+      font-size: 5pt;
+      font-weight: bold;
+      padding: 0.05rem 0.2rem;
+      border-radius: 2px;
+      letter-spacing: 0.05em;
+      margin-top: 0.05rem;
+      white-space: nowrap;
+    }
+
+    .exec-text { flex: 1; line-height: 1.3; }
+
+    .exec-crew { flex-shrink: 0; margin-top: 0.05rem; }
+
+    /* ---- Settings Grid ---- */
+    .settings-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.3rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .setting-card {
+      background: var(--paper);
+      border: 1px solid var(--tan-dark);
+      border-left: 3px solid var(--red-accent);
+      padding: 0.3rem 0.4rem;
+      font-size: 6.5pt;
+    }
+
+    .setting-label {
+      font-weight: bold;
+      font-size: 7pt;
+      color: var(--olive-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .setting-range { font-size: 6pt; color: var(--brown); }
+    .setting-formula { font-size: 6.5pt; font-weight: bold; color: var(--red-accent); }
+    .setting-formula-desc { font-size: 6pt; color: var(--ink-light); font-style: italic; }
+    .setting-desc { font-size: 6pt; color: var(--ink-light); line-height: 1.3; margin-top: 0.1rem; }
+    .setting-crew { font-size: 5.5pt; color: var(--red-accent); font-weight: bold; margin-top: 0.1rem; }
+
+    /* ---- Notes ---- */
+    .notes-list { display: flex; flex-direction: column; gap: 0.15rem; }
+
+    .note-item {
+      font-size: 6.5pt;
+      line-height: 1.3;
+      padding: 0.15rem 0.35rem;
+      border-left: 3px solid var(--olive);
+      background: var(--paper);
+    }
+
+    .note-item.warning { border-left-color: var(--red-accent); background: rgba(139,0,0,0.06); }
+    .note-item.tip     { border-left-color: var(--amber); background: rgba(212,160,23,0.08); }
+
+    .note-prefix {
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 5.5pt;
+      letter-spacing: 0.1em;
+      margin-right: 0.2rem;
+    }
+
+    .note-prefix.info    { color: var(--olive-dark); }
+    .note-prefix.warning { color: var(--red-accent); }
+    .note-prefix.tip     { color: var(--amber); }
+
+    /* ---- Page Footer ---- */
+    .page-footer {
+      margin-top: auto;
+      padding-top: 0.2rem;
+      border-top: 1px solid var(--tan-dark);
+      display: flex;
+      justify-content: space-between;
+      font-size: 5.5pt;
+      color: var(--tan-dark);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    /* ---- Cover Page ---- */
+    .cover-page {
+      width: 100%;
+      page-break-after: always;
+      break-after: page;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      min-height: 90vh;
+      padding: 0.5rem 0.6rem;
+    }
+
+    .cover-title {
+      font-family: var(--font-stencil);
+      font-size: 36pt;
+      color: var(--olive-dark);
+      letter-spacing: 0.12em;
+      margin-bottom: 0.3rem;
+    }
+
+    .cover-subtitle {
+      font-family: var(--font-stencil);
+      font-size: 18pt;
+      color: var(--olive);
+      letter-spacing: 0.15em;
+      margin-bottom: 2rem;
+    }
+
+    .cover-line {
+      width: 200px;
+      height: 3px;
+      background: var(--olive-dark);
+      margin: 0 auto 2rem;
+    }
+
+    .cover-info {
+      font-size: 9pt;
+      color: var(--ink-light);
+      line-height: 2;
+    }
+
+    .cover-footer {
+      margin-top: auto;
+      font-size: 7pt;
+      color: var(--tan-dark);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    /* ---- TOC Page ---- */
+    .toc-page {
+      width: 100%;
+      page-break-after: always;
+      break-after: page;
+      padding: 0.5rem 0.6rem;
+    }
+
+    .toc-heading {
+      font-family: var(--font-stencil);
+      font-size: 14pt;
+      color: var(--olive-dark);
+      letter-spacing: 0.12em;
+      border-bottom: 3px solid var(--olive-dark);
+      padding-bottom: 0.3rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .toc-section-label {
+      font-family: var(--font-stencil);
+      font-size: 9pt;
+      color: var(--olive);
+      letter-spacing: 0.15em;
+      margin-top: 0.6rem;
+      margin-bottom: 0.25rem;
+      padding-bottom: 0.15rem;
+      border-bottom: 1px solid var(--tan-dark);
+    }
+
+    .toc-entry {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 0.15rem 0;
+      border-bottom: 1px dotted var(--tan);
+      font-size: 8.5pt;
+    }
+
+    .toc-name { color: var(--ink); }
+    .toc-page-num {
+      color: var(--olive-dark);
+      font-weight: bold;
+      min-width: 20px;
+      text-align: right;
+    }
+  </style>
+</head>
+<body>
+  <div id="pages-container"></div>
+
+  <script src="js/procedures.js"></script>
+  <script>
+  (function() {
+    'use strict';
+
+    var orderedIds = MODE_ORDER.filter(function(id) {
+      return id !== '__a2a_divider__' && PROCEDURES[id];
+    });
+
+    var container = document.getElementById('pages-container');
+    var total = orderedIds.length;
+
+    // Build cover page
+    container.appendChild(buildCover(total));
+
+    // Build table of contents
+    container.appendChild(buildTOC(orderedIds));
+
+    // Build procedure pages
+    orderedIds.forEach(function(modeId, index) {
+      var proc = PROCEDURES[modeId];
+      var pageNum = index + 1;
+      container.appendChild(buildPage(proc, pageNum, total));
+    });
+
+    // ---- Cover Page ----
+    function buildCover(total) {
+      var div = document.createElement('div');
+      div.className = 'cover-page';
+      div.innerHTML =
+        '<div>' +
+          '<div class="cover-title">F-4E PHANTOM II</div>' +
+          '<div class="cover-subtitle">COMBAT PROCEDURES</div>' +
+          '<div class="cover-line"></div>' +
+          '<div class="cover-info">' +
+            'JESTER AI PROCEDURES REFERENCE<br>' +
+            'AIR-TO-GROUND & AIR-TO-AIR<br>' +
+            total + ' DELIVERY / ENGAGEMENT MODES<br><br>' +
+            'DATA SOURCE: HEATBLUR F-4E MANUAL<br>' +
+            'VERSION 2.0' +
+          '</div>' +
+        '</div>' +
+        '<div class="cover-footer">JESTER PROCEDURES MOD // FOR DCS WORLD</div>';
+      return div;
+    }
+
+    // ---- Table of Contents ----
+    function buildTOC(ids) {
+      var div = document.createElement('div');
+      div.className = 'toc-page';
+
+      var html = '<div class="toc-heading">TABLE OF CONTENTS</div>';
+
+      // Find divider index to split A2G / A2A
+      var dividerIdx = MODE_ORDER.indexOf('__a2a_divider__');
+      var a2gIds = ids.filter(function(id) { return MODE_ORDER.indexOf(id) < dividerIdx; });
+      var a2aIds = ids.filter(function(id) { return MODE_ORDER.indexOf(id) > dividerIdx; });
+
+      html += '<div class="toc-section-label">AIR-TO-GROUND PROCEDURES</div>';
+      a2gIds.forEach(function(id, i) {
+        var proc = PROCEDURES[id];
+        html += '<div class="toc-entry">' +
+          '<span class="toc-name">' + esc(proc.name) + '</span>' +
+          '<span class="toc-page-num">' + (i + 1) + '</span>' +
+          '</div>';
+      });
+
+      html += '<div class="toc-section-label">AIR-TO-AIR PROCEDURES</div>';
+      a2aIds.forEach(function(id, i) {
+        var proc = PROCEDURES[id];
+        html += '<div class="toc-entry">' +
+          '<span class="toc-name">' + esc(proc.name) + '</span>' +
+          '<span class="toc-page-num">' + (a2gIds.length + i + 1) + '</span>' +
+          '</div>';
+      });
+
+      div.innerHTML = html;
+      return div;
+    }
+
+    // ---- Procedure Page ----
+    function buildPage(proc, pageNum, total) {
+      var div = document.createElement('div');
+      div.className = 'procedure-page';
+      div.innerHTML =
+        buildHeader(proc) +
+        buildDescription(proc) +
+        buildDiagram(proc, proc.id) +
+        buildSetup(proc) +
+        buildExecution(proc) +
+        buildSettings(proc) +
+        buildNotes(proc) +
+        buildFooter(proc, pageNum, total);
+      return div;
+    }
+
+    // ---- Header ----
+    function buildHeader(proc) {
+      return '<div class="page-header">' +
+        '<div class="page-header-left">' +
+          '<span class="mode-badge">' + esc(proc.category) + '</span>' +
+          '<span class="page-title">' + esc(proc.name) + '</span>' +
+        '</div>' +
+        '<div class="page-header-right">' +
+          '<span class="header-short-name">' + esc(proc.shortName || '') + '</span>' +
+        '</div>' +
+        '</div>';
+    }
+
+    // ---- Description ----
+    function buildDescription(proc) {
+      var knob = proc.deliveryKnobPosition
+        ? '<div class="delivery-knob-info">Delivery Mode Knob: ' + esc(proc.deliveryKnobPosition) + '</div>'
+        : '';
+      return '<div class="page-description">' +
+        esc(proc.description || '') + knob +
+        '</div>';
+    }
+
+    // ---- SVG Diagram ----
+    function buildDiagram(proc, namespace) {
+      if (!proc.diagram) return '';
+
+      var svgText = loadSvgSync(proc.diagram);
+      if (!svgText) {
+        return '<div class="diagram-section">' +
+          '<h2 class="section-heading">ATTACK PROFILE</h2>' +
+          '<div class="svg-wrapper"><span style="color:#b8956a;font-size:8pt;">Diagram unavailable</span></div>' +
+          '</div>';
+      }
+
+      // Namespace SVG IDs to avoid collisions
+      var idPattern = /\bid="([^"]+)"/g;
+      var ids = [];
+      var match;
+      while ((match = idPattern.exec(svgText)) !== null) {
+        ids.push(match[1]);
+      }
+
+      ids.forEach(function(id) {
+        var nsId = namespace + '_' + id;
+        svgText = svgText.replace(
+          new RegExp('\\bid="' + escRegex(id) + '"', 'g'),
+          'id="' + nsId + '"'
+        );
+        svgText = svgText.replace(
+          new RegExp('url\\(#' + escRegex(id) + '\\)', 'g'),
+          'url(#' + nsId + ')'
+        );
+        svgText = svgText.replace(
+          new RegExp('href="#' + escRegex(id) + '"', 'g'),
+          'href="#' + nsId + '"'
+        );
+      });
+
+      // Strip explicit width/height so CSS max-width scales it
+      svgText = svgText.replace(/\s+width="\d+"/, '');
+      svgText = svgText.replace(/\s+height="\d+"/, '');
+
+      // Profile parameters
+      var paramsHtml = '';
+      if (proc.attackProfile) {
+        var ap = proc.attackProfile;
+        var paramDefs = [
+          { label: 'DIVE ANGLE',     value: ap.typicalDiveAngle },
+          { label: 'ENTRY ALT',      value: ap.typicalAltitude },
+          { label: 'ENTRY SPEED',    value: ap.typicalSpeed },
+          { label: 'RELEASE ALT',    value: ap.releaseAltitude },
+          { label: 'MIN PULLOUT',    value: ap.minPulloutAlt },
+          { label: 'ENGAGE RNG',     value: ap.engagementRange },
+          { label: 'GUIDANCE',       value: ap.guidanceType },
+          { label: 'RADAR MODE',     value: ap.radarMode },
+          { label: 'SEEKER',         value: ap.seekerType }
+        ];
+        var pills = paramDefs
+          .filter(function(p) { return !!p.value; })
+          .map(function(p) {
+            return '<div class="profile-param">' +
+              '<div class="profile-param-label">' + esc(p.label) + '</div>' +
+              '<div class="profile-param-value">' + esc(p.value) + '</div>' +
+              '</div>';
+          }).join('');
+        if (pills) paramsHtml = '<div class="profile-params-grid">' + pills + '</div>';
+      }
+
+      return '<div class="diagram-section">' +
+        '<h2 class="section-heading">ATTACK PROFILE</h2>' +
+        '<div class="svg-wrapper">' + svgText + '</div>' +
+        paramsHtml +
+        '</div>';
+    }
+
+    // ---- Setup Checklist ----
+    function buildSetup(proc) {
+      if (!proc.setup || proc.setup.length === 0) return '';
+
+      var rows = proc.setup.map(function(item) {
+        var sysColor = SYSTEM_COLORS[item.system] || { bg: '#556b2f', fg: '#fff' };
+        return '<tr>' +
+          '<td class="col-step">' + item.step + '</td>' +
+          '<td class="col-system">' +
+            '<span class="sys-badge" style="background:' + sysColor.bg + ';color:' + sysColor.fg + ';">' +
+              esc(item.system) + '</span>' +
+          '</td>' +
+          '<td class="col-action">' + esc(item.action) + '</td>' +
+          '<td class="col-setting"><strong>' + esc(item.setting) + '</strong></td>' +
+          '<td class="col-crew">' +
+            '<span class="crew-badge ' + (item.crew || '').toLowerCase() + '">' +
+              esc(item.crew || '') + '</span>' +
+          '</td>' +
+          '</tr>';
+      }).join('');
+
+      return '<div class="setup-section">' +
+        '<h2 class="section-heading">SETUP CHECKLIST</h2>' +
+        '<table class="checklist-table">' +
+        '<thead><tr>' +
+          '<th class="col-step">#</th>' +
+          '<th class="col-system">SYS</th>' +
+          '<th class="col-action">ACTION</th>' +
+          '<th class="col-setting">SETTING</th>' +
+          '<th class="col-crew">CREW</th>' +
+        '</tr></thead>' +
+        '<tbody>' + rows + '</tbody></table></div>';
+    }
+
+    // ---- Execution ----
+    function buildExecution(proc) {
+      if (!proc.execution || proc.execution.length === 0) return '';
+
+      var items = proc.execution.map(function(item) {
+        var phaseColor = PHASE_COLORS[item.phase] || { bg: '#556b2f', fg: '#fff' };
+        return '<li class="execution-item">' +
+          '<span class="exec-num">' + item.step + '</span>' +
+          '<span class="exec-phase" style="background:' + phaseColor.bg + ';color:' + phaseColor.fg + ';">' +
+            esc(item.phase || '') + '</span>' +
+          '<span class="exec-text">' + esc(item.action) + '</span>' +
+          '<span class="exec-crew">' +
+            '<span class="crew-badge ' + (item.crew || '').toLowerCase() + '">' +
+              esc(item.crew || '') + '</span>' +
+          '</span>' +
+          '</li>';
+      }).join('');
+
+      return '<div class="execution-section">' +
+        '<h2 class="section-heading">ATTACK PROCEDURE</h2>' +
+        '<ol class="execution-list">' + items + '</ol></div>';
+    }
+
+    // ---- Settings ----
+    function buildSettings(proc) {
+      var combined = {};
+      ['wrcsSettings', 'arbcsSettings', 'radarSettings'].forEach(function(key) {
+        if (proc[key]) {
+          Object.keys(proc[key]).forEach(function(k) { combined[k] = proc[key][k]; });
+        }
+      });
+      if (Object.keys(combined).length === 0) return '';
+
+      var heading = proc.radarSettings ? 'RADAR / FIRE CONTROL SETTINGS'
+        : (proc.wrcsSettings && proc.arbcsSettings) ? 'WRCS / ARBCS SETTINGS'
+        : proc.arbcsSettings ? 'ARBCS SETTINGS'
+        : 'WRCS SETTINGS';
+
+      var cards = Object.keys(combined).map(function(k) {
+        var s = combined[k];
+        var html = '<div class="setting-label">' + esc(s.label) + '</div>' +
+          '<div class="setting-range">Range: ' + esc(s.range) + '</div>';
+        if (s.formula) {
+          html += '<div class="setting-formula">' + esc(s.formula) + '</div>';
+          if (s.formulaDesc) html += '<div class="setting-formula-desc">' + esc(s.formulaDesc) + '</div>';
+        }
+        html += '<div class="setting-desc">' + esc(s.description) + '</div>';
+        if (s.crew) html += '<div class="setting-crew">OPERATED BY: ' + esc(s.crew) + '</div>';
+        return '<div class="setting-card">' + html + '</div>';
+      }).join('');
+
+      return '<div class="settings-section">' +
+        '<h2 class="section-heading">' + heading + '</h2>' +
+        '<div class="settings-grid">' + cards + '</div></div>';
+    }
+
+    // ---- Notes ----
+    function buildNotes(proc) {
+      if (!proc.notes || proc.notes.length === 0) return '';
+
+      var items = proc.notes.map(function(note) {
+        var type = note.type || 'info';
+        return '<div class="note-item ' + type + '">' +
+          '<span class="note-prefix ' + type + '">' + type.toUpperCase() + ':</span>' +
+          esc(note.text) + '</div>';
+      }).join('');
+
+      return '<div class="notes-section">' +
+        '<h2 class="section-heading">NOTES</h2>' +
+        '<div class="notes-list">' + items + '</div></div>';
+    }
+
+    // ---- Footer ----
+    function buildFooter(proc, pageNum, total) {
+      return '<div class="page-footer">' +
+        '<span>F-4E PHANTOM II // JESTER PROCEDURES MOD // V2.0</span>' +
+        '<span>' + esc(proc.name) + ' // PAGE ' + pageNum + ' OF ' + total + '</span>' +
+        '</div>';
+    }
+
+    // ---- Helpers ----
+    function loadSvgSync(path) {
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', path, false);
+      xhr.send(null);
+      return xhr.status === 200 ? xhr.responseText : null;
+    }
+
+    function esc(str) {
+      if (!str) return '';
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    function escRegex(str) {
+      return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    }
+  })();
+  </script>
+</body>
+</html>

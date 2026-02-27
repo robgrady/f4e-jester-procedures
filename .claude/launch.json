@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "overlay",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "/Users/rgrady/Claude/jester-a2g-mod/overlay", "-l", "3847"],
+      "port": 3847
+    }
+  ]
+}

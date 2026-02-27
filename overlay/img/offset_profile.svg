@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 380" width="750" height="380">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#1a1a1a"/></marker>
+    <marker id="arr-r" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#8b0000"/></marker>
+    <marker id="arr-o" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#556b2f"/></marker>
+    <marker id="arr-brn" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#5c4033"/></marker>
+    <pattern id="gh" patternUnits="userSpaceOnUse" width="8" height="8" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="8" stroke="#b8956a" stroke-width="1"/></pattern>
+  </defs>
+  <rect width="750" height="380" fill="#f5f0e1" rx="2"/>
+  <text x="375" y="22" text-anchor="middle" font-family="Impact,Arial Black,sans-serif" font-size="14" fill="#3b4a20" letter-spacing="3">OFFSET BOMB (OB) - ATTACK PROFILE</text>
+  <!-- Ground -->
+  <rect x="0" y="310" width="750" height="70" fill="url(#gh)" opacity="0.3"/>
+  <line x1="0" y1="310" x2="750" y2="310" stroke="#5c4033" stroke-width="2"/>
+  <text x="25" y="335" font-family="Courier New,monospace" font-size="9" fill="#5c4033" letter-spacing="1">TERRAIN</text>
+  <!-- Actual Target (offset from RIP/VIP) -->
+  <g transform="translate(490,295)"><line x1="-12" y1="0" x2="12" y2="0" stroke="#8b0000" stroke-width="2"/><line x1="0" y1="-12" x2="0" y2="12" stroke="#8b0000" stroke-width="2"/><circle cx="0" cy="0" r="8" stroke="#8b0000" stroke-width="1.5" fill="none"/><circle cx="0" cy="0" r="3" fill="#8b0000"/><text x="0" y="28" text-anchor="middle" font-family="Impact,Arial Black,sans-serif" font-size="11" fill="#8b0000" letter-spacing="1">TARGET</text></g>
+  <!-- RIP/VIP marker on ground -->
+  <g transform="translate(350,295)">
+    <rect x="-8" y="-8" width="16" height="16" fill="none" stroke="#556b2f" stroke-width="2"/>
+    <line x1="-5" y1="-5" x2="5" y2="5" stroke="#556b2f" stroke-width="1.5"/>
+    <line x1="5" y1="-5" x2="-5" y2="5" stroke="#556b2f" stroke-width="1.5"/>
+    <text x="0" y="-15" text-anchor="middle" font-family="Courier New,monospace" font-size="10" fill="#556b2f" font-weight="bold">RIP/VIP</text>
+  </g>
+  <!-- Offset arrows from RIP/VIP to target -->
+  <!-- E/W offset (horizontal) -->
+  <line x1="365" y1="295" x2="475" y2="295" stroke="#5c4033" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arr-brn)"/>
+  <text x="410" y="290" text-anchor="middle" font-family="Courier New,monospace" font-size="8" fill="#5c4033" font-weight="bold">E/W OFFSET</text>
+  <!-- N/S offset (vertical, shown diagonally for perspective) -->
+  <line x1="350" y1="295" x2="350" y2="310" stroke="#5c4033" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="325" y="305" text-anchor="end" font-family="Courier New,monospace" font-size="8" fill="#5c4033" font-weight="bold">N/S</text>
+  <!-- Level flight path -->
+  <line x1="60" y1="180" x2="230" y2="180" stroke="#1a1a1a" stroke-width="2" stroke-dasharray="8,4" marker-end="url(#arr)"/>
+  <text x="100" y="168" font-family="Courier New,monospace" font-size="9" fill="#1a1a1a" font-weight="bold">INGRESS</text>
+  <!-- Aircraft -->
+  <g transform="translate(250,175)"><polygon points="-15,0 0,-5 15,0 0,3" fill="#3b4a20" stroke="#1a1a1a" stroke-width="1"/></g>
+  <!-- Radar beam to RIP/VIP -->
+  <polygon points="260,185 340,290 360,290" fill="rgba(74,55,40,0.10)" stroke="#4a3728" stroke-width="1" stroke-dasharray="4,2"/>
+  <!-- FREEZE + TARGET INSERT annotation -->
+  <g transform="translate(265,180)"><circle cx="0" cy="0" r="5" fill="#8b0000"/><line x1="5" y1="-5" x2="45" y2="-30" stroke="#8b0000" stroke-width="1"/><text x="48" y="-32" font-family="Courier New,monospace" font-size="8.5" fill="#8b0000" font-weight="bold">FREEZE +</text><text x="48" y="-22" font-family="Courier New,monospace" font-size="8.5" fill="#8b0000" font-weight="bold">TARGET INSERT</text></g>
+  <!-- Continue flight with steering -->
+  <line x1="265" y1="180" x2="500" y2="180" stroke="#1a1a1a" stroke-width="2.5" marker-end="url(#arr)"/>
+  <!-- Steering cues box -->
+  <g transform="translate(400,135)"><rect x="-55" y="-14" width="110" height="28" rx="2" fill="rgba(85,107,47,0.1)" stroke="#556b2f" stroke-width="1"/><text x="0" y="-2" text-anchor="middle" font-family="Courier New,monospace" font-size="8" fill="#556b2f" font-weight="bold">WRCS COMPUTES</text><text x="0" y="9" text-anchor="middle" font-family="Courier New,monospace" font-size="8" fill="#556b2f" font-weight="bold">RELEASE POINT</text></g>
+  <!-- Computed release point -->
+  <g transform="translate(500,180)"><circle cx="0" cy="0" r="5" fill="#556b2f"/></g>
+  <line x1="500" y1="173" x2="500" y2="105" stroke="#556b2f" stroke-width="1"/>
+  <text x="503" y="102" font-family="Courier New,monospace" font-size="8.5" fill="#556b2f" font-weight="bold">COMPUTED</text>
+  <text x="503" y="113" font-family="Courier New,monospace" font-size="8.5" fill="#556b2f" font-weight="bold">RELEASE POINT</text>
+  <!-- Bomb trajectory -->
+  <path d="M 500 186 Q 510 250 495 308" stroke="#8b0000" stroke-width="2" stroke-dasharray="5,3" fill="none" marker-end="url(#arr-r)"/>
+  <ellipse cx="507" cy="240" rx="3" ry="5" fill="#8b0000" transform="rotate(-5,507,240)"/>
+  <!-- Egress -->
+  <line x1="515" y1="180" x2="680" y2="130" stroke="#1a1a1a" stroke-width="2" stroke-dasharray="8,4" marker-end="url(#arr)"/>
+  <text x="655" y="118" font-family="Courier New,monospace" font-size="9" fill="#1a1a1a" font-weight="bold">EGRESS</text>
+  <!-- Altitude annotation -->
+  <line x1="80" y1="180" x2="80" y2="310" stroke="#556b2f" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="75" y1="180" x2="85" y2="180" stroke="#556b2f" stroke-width="1.5"/>
+  <line x1="75" y1="310" x2="85" y2="310" stroke="#556b2f" stroke-width="1.5"/>
+  <text x="72" y="250" text-anchor="end" font-family="Courier New,monospace" font-size="9" fill="#556b2f" transform="rotate(-90,72,250)">3,000-8,000 FT AGL</text>
+  <!-- Note box -->
+  <g transform="translate(80,45)"><rect x="0" y="0" width="190" height="40" rx="2" fill="rgba(85,107,47,0.1)" stroke="#556b2f" stroke-width="1"/><text x="95" y="16" text-anchor="middle" font-family="Courier New,monospace" font-size="8" fill="#556b2f" font-weight="bold">RADAR LOCKS RIP/VIP</text><text x="95" y="28" text-anchor="middle" font-family="Courier New,monospace" font-size="8" fill="#556b2f" font-weight="bold">OFFSETS TO ACTUAL TGT</text></g>
+  <!-- Legend -->
+  <g transform="translate(580,330)"><rect x="0" y="0" width="155" height="42" rx="2" fill="#f5f0e1" stroke="#b8956a" stroke-width="1"/><line x1="10" y1="12" x2="30" y2="12" stroke="#1a1a1a" stroke-width="2"/><text x="35" y="15" font-family="Courier New,monospace" font-size="7.5" fill="#1a1a1a">FLIGHT PATH</text><line x1="10" y1="26" x2="30" y2="26" stroke="#8b0000" stroke-width="2" stroke-dasharray="5,3"/><text x="35" y="29" font-family="Courier New,monospace" font-size="7.5" fill="#8b0000">BOMB TRAJECTORY</text><line x1="10" y1="38" x2="30" y2="38" stroke="#5c4033" stroke-width="1.5" stroke-dasharray="4,3"/><text x="35" y="41" font-family="Courier New,monospace" font-size="7.5" fill="#5c4033">OFFSET VECTOR</text></g>
+  <!-- Border -->
+  <rect x="1" y="1" width="748" height="378" rx="2" fill="none" stroke="#b8956a" stroke-width="2"/>
+</svg>

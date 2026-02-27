@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 380" width="750" height="380">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#1a1a1a"/></marker>
+    <marker id="arr-r" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#8b0000"/></marker>
+    <marker id="arr-b" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#2f3f6f"/></marker>
+  </defs>
+  <rect width="750" height="380" fill="#f5f0e1" rx="2"/>
+  <text x="375" y="22" text-anchor="middle" font-family="Impact,Arial Black,sans-serif" font-size="14" fill="#3b4a20" letter-spacing="3">RADAR INTERCEPT - FULL KILL CHAIN</text>
+
+  <!-- Timeline arrow along bottom -->
+  <line x1="40" y1="310" x2="710" y2="310" stroke="#1a1a1a" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Phase labels along timeline -->
+  <!-- SEARCH phase -->
+  <rect x="45" y="318" width="100" height="18" rx="2" fill="#2f3f6f"/>
+  <text x="95" y="331" text-anchor="middle" font-family="Courier New,monospace" font-size="7.5" fill="#fff" font-weight="bold">SEARCH</text>
+  <!-- DETECT phase -->
+  <rect x="155" y="318" width="90" height="18" rx="2" fill="#4a5068"/>
+  <text x="200" y="331" text-anchor="middle" font-family="Courier New,monospace" font-size="7.5" fill="#fff" font-weight="bold">DETECT</text>
+  <!-- TRACK phase -->
+  <rect x="255" y="318" width="90" height="18" rx="2" fill="#4a3728"/>
+  <text x="300" y="331" text-anchor="middle" font-family="Courier New,monospace" font-size="7.5" fill="#fff" font-weight="bold">TRACK</text>
+  <!-- SORT phase -->
+  <rect x="355" y="318" width="80" height="18" rx="2" fill="#6b5b3a"/>
+  <text x="395" y="331" text-anchor="middle" font-family="Courier New,monospace" font-size="7.5" fill="#fff" font-weight="bold">SORT / IFF</text>
+  <!-- EMPLOY phase -->
+  <rect x="445" y="318" width="120" height="18" rx="2" fill="#8b0000"/>
+  <text x="505" y="331" text-anchor="middle" font-family="Courier New,monospace" font-size="7.5" fill="#fff" font-weight="bold">EMPLOY</text>
+  <!-- ASSESS phase -->
+  <rect x="575" y="318" width="100" height="18" rx="2" fill="#4a5d23"/>
+  <text x="625" y="331" text-anchor="middle" font-family="Courier New,monospace" font-size="7.5" fill="#fff" font-weight="bold">ASSESS</text>
+
+  <!-- F-4E Aircraft (left) -->
+  <g transform="translate(80,180)">
+    <polygon points="-15,0 0,-5 15,0 0,3" fill="#3b4a20" stroke="#1a1a1a" stroke-width="1"/>
+  </g>
+  <text x="80" y="205" text-anchor="middle" font-family="Courier New,monospace" font-size="8" fill="#3b4a20" font-weight="bold">F-4E</text>
+
+  <!-- Flight path arrow -->
+  <line x1="95" y1="180" x2="620" y2="180" stroke="#1a1a1a" stroke-width="2" stroke-dasharray="8,4" marker-end="url(#arr)"/>
+
+  <!-- Bogey aircraft (right) -->
+  <g transform="translate(660,180) scale(-1,1)">
+    <polygon points="-15,0 0,-5 15,0 0,3" fill="#8b0000" stroke="#1a1a1a" stroke-width="1"/>
+    <line x1="-8" y1="5" x2="8" y2="5" stroke="#1a1a1a" stroke-width="1.5"/>
+  </g>
+  <text x="660" y="205" text-anchor="middle" font-family="Courier New,monospace" font-size="8" fill="#8b0000" font-weight="bold">BOGEY</text>
+
+  <!-- Radar search cone (wide, early) -->
+  <path d="M 95 170 L 250 120" stroke="#2f3f6f" stroke-width="1" stroke-dasharray="3,2" fill="none"/>
+  <path d="M 95 190 L 250 240" stroke="#2f3f6f" stroke-width="1" stroke-dasharray="3,2" fill="none"/>
+  <path d="M 95 170 L 250 120 L 250 240 L 95 190 Z" fill="#2f3f6f" opacity="0.04"/>
+  <text x="170" y="140" font-family="Courier New,monospace" font-size="7.5" fill="#2f3f6f" font-weight="bold">RDR SEARCH</text>
+
+  <!-- Detection range marker -->
+  <line x1="250" y1="155" x2="250" y2="300" stroke="#4a5068" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <circle cx="250" cy="180" r="4" fill="#4a5068"/>
+  <text x="253" y="160" font-family="Courier New,monospace" font-size="7.5" fill="#4a5068" font-weight="bold">DETECT</text>
+  <text x="250" y="295" text-anchor="middle" font-family="Courier New,monospace" font-size="7" fill="#4a5068">~40 NM</text>
+
+  <!-- Track/lock marker -->
+  <line x1="340" y1="155" x2="340" y2="300" stroke="#4a3728" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <circle cx="340" cy="180" r="4" fill="#4a3728"/>
+  <text x="343" y="160" font-family="Courier New,monospace" font-size="7.5" fill="#4a3728" font-weight="bold">STT LOCK</text>
+  <text x="340" y="295" text-anchor="middle" font-family="Courier New,monospace" font-size="7" fill="#4a3728">~25 NM</text>
+
+  <!-- Narrowed radar beam after lock (STT) -->
+  <line x1="340" y1="178" x2="645" y2="178" stroke="#2f3f6f" stroke-width="2" fill="none"/>
+  <line x1="340" y1="182" x2="645" y2="182" stroke="#2f3f6f" stroke-width="2" fill="none"/>
+  <text x="490" y="172" text-anchor="middle" font-family="Courier New,monospace" font-size="7.5" fill="#2f3f6f" font-weight="bold">STT (SINGLE TARGET TRACK)</text>
+
+  <!-- Commit/fire range marker -->
+  <line x1="460" y1="155" x2="460" y2="300" stroke="#8b0000" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <circle cx="460" cy="180" r="4" fill="#8b0000"/>
+  <text x="463" y="160" font-family="Courier New,monospace" font-size="7.5" fill="#8b0000" font-weight="bold">FIRE AIM-7</text>
+  <text x="460" y="295" text-anchor="middle" font-family="Courier New,monospace" font-size="7" fill="#8b0000">~15 NM</text>
+
+  <!-- AIM-7 trajectory from fire point -->
+  <path d="M 465 180 Q 530 175 640 180" stroke="#8b0000" stroke-width="2" fill="none" marker-end="url(#arr-r)"/>
+  <!-- Missile symbol -->
+  <g transform="translate(550,177)">
+    <polygon points="-6,0 6,0 5,-1.5 -5,-1.5" fill="#8b0000"/>
+    <polygon points="6,0 9,-2 9,2" fill="#8b0000"/>
+  </g>
+
+  <!-- WVR transition marker -->
+  <line x1="560" y1="155" x2="560" y2="300" stroke="#d4a017" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="563" y="160" font-family="Courier New,monospace" font-size="7.5" fill="#d4a017" font-weight="bold">WVR MERGE</text>
+  <text x="560" y="295" text-anchor="middle" font-family="Courier New,monospace" font-size="7" fill="#d4a017">~5 NM</text>
+
+  <!-- GCI vectors annotation -->
+  <g transform="translate(40,45)">
+    <rect x="0" y="0" width="170" height="55" rx="2" fill="rgba(47,63,111,0.08)" stroke="#2f3f6f" stroke-width="1"/>
+    <text x="85" y="16" text-anchor="middle" font-family="Courier New,monospace" font-size="8.5" fill="#2f3f6f" font-weight="bold">GCI / AWACS</text>
+    <text x="85" y="30" text-anchor="middle" font-family="Courier New,monospace" font-size="8" fill="#2f3f6f">BRAA: Bearing, Range</text>
+    <text x="85" y="42" text-anchor="middle" font-family="Courier New,monospace" font-size="8" fill="#2f3f6f">Altitude, Aspect</text>
+  </g>
+
+  <!-- JUDY callout -->
+  <g transform="translate(230,45)">
+    <rect x="0" y="0" width="110" height="40" rx="2" fill="rgba(85,107,47,0.1)" stroke="#556b2f" stroke-width="1"/>
+    <text x="55" y="16" text-anchor="middle" font-family="Courier New,monospace" font-size="9" fill="#556b2f" font-weight="bold">JUDY</text>
+    <text x="55" y="30" text-anchor="middle" font-family="Courier New,monospace" font-size="7.5" fill="#556b2f">Own radar contact</text>
+  </g>
+
+  <!-- Weapon transition box -->
+  <g transform="translate(430,45)">
+    <rect x="0" y="0" width="180" height="55" rx="2" fill="rgba(139,0,0,0.08)" stroke="#8b0000" stroke-width="1"/>
+    <text x="90" y="16" text-anchor="middle" font-family="Courier New,monospace" font-size="8" fill="#8b0000" font-weight="bold">WEAPON TRANSITION</text>
+    <text x="90" y="30" text-anchor="middle" font-family="Courier New,monospace" font-size="7.5" fill="#8b0000">AIM-7 → AIM-9 → GUN</text>
+    <text x="90" y="42" text-anchor="middle" font-family="Courier New,monospace" font-size="7.5" fill="#8b0000">BVR → WVR → Merge</text>
+  </g>
+
+  <!-- IFF annotation -->
+  <g transform="translate(345,110)">
+    <rect x="0" y="0" width="100" height="28" rx="2" fill="rgba(107,91,58,0.15)" stroke="#6b5b3a" stroke-width="1"/>
+    <text x="50" y="18" text-anchor="middle" font-family="Courier New,monospace" font-size="8" fill="#6b5b3a" font-weight="bold">IFF MANDATORY</text>
+  </g>
+
+  <!-- SPLASH assessment -->
+  <g transform="translate(620,110)">
+    <rect x="0" y="0" width="100" height="28" rx="2" fill="rgba(74,93,35,0.15)" stroke="#4a5d23" stroke-width="1"/>
+    <text x="50" y="18" text-anchor="middle" font-family="Courier New,monospace" font-size="8" fill="#4a5d23" font-weight="bold">SPLASH / BDA</text>
+  </g>
+
+  <!-- Legend -->
+  <g transform="translate(40,340)">
+    <rect x="0" y="0" width="200" height="30" rx="2" fill="#f5f0e1" stroke="#b8956a" stroke-width="1"/>
+    <line x1="10" y1="10" x2="30" y2="10" stroke="#1a1a1a" stroke-width="2" stroke-dasharray="8,4"/>
+    <text x="35" y="13" font-family="Courier New,monospace" font-size="7.5" fill="#1a1a1a">FLIGHT PATH</text>
+    <line x1="10" y1="22" x2="30" y2="22" stroke="#8b0000" stroke-width="2"/>
+    <text x="35" y="25" font-family="Courier New,monospace" font-size="7.5" fill="#8b0000">MISSILE PATH</text>
+    <line x1="110" y1="10" x2="130" y2="10" stroke="#2f3f6f" stroke-width="2"/>
+    <text x="135" y="13" font-family="Courier New,monospace" font-size="7.5" fill="#2f3f6f">RADAR BEAM</text>
+  </g>
+
+  <!-- Border -->
+  <rect x="1" y="1" width="748" height="378" rx="2" fill="none" stroke="#b8956a" stroke-width="2"/>
+</svg>

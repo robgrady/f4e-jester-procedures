@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>F-4E Combat Procedures</title>
+  <link rel="stylesheet" href="css/kneeboard.css">
+</head>
+<body>
+  <div id="app">
+
+    <!-- Top Navigation Bar -->
+    <nav id="mode-nav">
+      <div class="nav-header">
+        <span class="nav-title">F-4E PHANTOM II</span>
+        <span class="nav-subtitle">PROCEDURES</span>
+      </div>
+      <div id="mode-tabs" class="nav-tabs">
+        <!-- Populated by app.js -->
+      </div>
+    </nav>
+
+    <!-- Main Card Area -->
+    <main id="card-container">
+
+      <!-- Card Header -->
+      <div id="card-header" class="card-section">
+        <div class="card-title-row">
+          <span id="card-mode-badge" class="mode-badge"></span>
+          <h1 id="card-title"></h1>
+        </div>
+        <p id="card-description" class="card-desc"></p>
+        <div id="card-delivery-knob" class="delivery-knob-info"></div>
+      </div>
+
+      <!-- Attack Profile Diagram -->
+      <div id="diagram-section" class="card-section">
+        <h2 class="section-heading">ATTACK PROFILE</h2>
+        <div id="diagram-container">
+          <!-- SVG loaded here -->
+        </div>
+        <div id="profile-params" class="profile-params">
+          <!-- Attack profile parameters -->
+        </div>
+      </div>
+
+      <!-- Setup Checklist -->
+      <div id="setup-section" class="card-section">
+        <h2 class="section-heading">
+          SETUP CHECKLIST
+          <button id="reset-setup" class="reset-btn" title="Reset all checkmarks">RESET</button>
+        </h2>
+        <table id="setup-table" class="checklist-table">
+          <thead>
+            <tr>
+              <th class="col-check"></th>
+              <th class="col-step">#</th>
+              <th class="col-system">SYS</th>
+              <th class="col-action">ACTION</th>
+              <th class="col-setting">SETTING</th>
+              <th class="col-crew">CREW</th>
+            </tr>
+          </thead>
+          <tbody id="setup-body">
+            <!-- Populated by app.js -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Execution Procedure -->
+      <div id="execution-section" class="card-section">
+        <h2 class="section-heading">
+          ATTACK PROCEDURE
+          <button id="reset-exec" class="reset-btn" title="Reset all checkmarks">RESET</button>
+        </h2>
+        <ol id="execution-list" class="execution-list">
+          <!-- Populated by app.js -->
+        </ol>
+      </div>
+
+      <!-- WRCS Settings -->
+      <div id="wrcs-section" class="card-section">
+        <h2 class="section-heading">WRCS SETTINGS</h2>
+        <div id="wrcs-settings" class="settings-grid">
+          <!-- Populated by app.js -->
+        </div>
+      </div>
+
+      <!-- Notes -->
+      <div id="notes-section" class="card-section">
+        <h2 class="section-heading">NOTES</h2>
+        <div id="notes-list" class="notes-list">
+          <!-- Populated by app.js -->
+        </div>
+      </div>
+
+      <!-- Coming Soon Placeholder -->
+      <div id="coming-soon" class="card-section coming-soon-card" style="display:none;">
+        <div class="coming-soon-icon">&#9888;</div>
+        <h2 id="coming-soon-title"></h2>
+        <p id="coming-soon-desc"></p>
+        <p class="coming-soon-msg">PROCEDURE CARD IN DEVELOPMENT</p>
+      </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="app-footer">
+      <span>JESTER PROCEDURES MOD</span>
+      <span class="footer-sep">|</span>
+      <span>DATA: HEATBLUR F-4E MANUAL</span>
+      <span class="footer-sep">|</span>
+      <span>V2.0</span>
+    </footer>
+
+  </div>
+
+  <script src="js/procedures.js"></script>
+  <script src="js/interface.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

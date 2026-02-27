@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 380" width="750" height="380">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#1a1a1a"/></marker>
+    <marker id="arr-r" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#8b0000"/></marker>
+  </defs>
+  <rect width="750" height="380" fill="#f5f0e1" rx="2"/>
+  <text x="375" y="22" text-anchor="middle" font-family="Impact,Arial Black,sans-serif" font-size="14" fill="#3b4a20" letter-spacing="3">AIM-9 SIDEWINDER - WVR ENGAGEMENT PROFILE</text>
+
+  <!-- Target aircraft (ahead, being pursued) -->
+  <g transform="translate(480,150)">
+    <polygon points="-15,0 0,-5 15,0 0,3" fill="#8b0000" stroke="#1a1a1a" stroke-width="1"/>
+    <line x1="-8" y1="5" x2="8" y2="5" stroke="#1a1a1a" stroke-width="1.5"/>
+  </g>
+  <text x="480" y="175" text-anchor="middle" font-family="Impact,Arial Black,sans-serif" font-size="10" fill="#8b0000" letter-spacing="1">TARGET</text>
+
+  <!-- Exhaust heat plume from target -->
+  <path d="M 465 150 Q 445 145 430 150 Q 415 155 400 150" stroke="#d4a017" stroke-width="2" fill="none" opacity="0.6"/>
+  <path d="M 465 152 Q 448 158 435 152 Q 420 146 405 152" stroke="#d4a017" stroke-width="1.5" fill="none" opacity="0.4"/>
+  <text x="425" y="140" text-anchor="middle" font-family="Courier New,monospace" font-size="7.5" fill="#d4a017" font-weight="bold">IR SIGNATURE</text>
+
+  <!-- F-4E Aircraft (behind, in rear hemisphere) -->
+  <g transform="translate(200,200)">
+    <polygon points="-15,0 0,-5 15,0 0,3" fill="#3b4a20" stroke="#1a1a1a" stroke-width="1"/>
+  </g>
+  <text x="200" y="225" text-anchor="middle" font-family="Impact,Arial Black,sans-serif" font-size="10" fill="#3b4a20" letter-spacing="1">F-4E</text>
+
+  <!-- IR Seeker FOV cone -->
+  <path d="M 215 195 L 380 140" stroke="#d4a017" stroke-width="1.5" stroke-dasharray="4,2" fill="none"/>
+  <path d="M 215 205 L 380 205" stroke="#d4a017" stroke-width="1.5" stroke-dasharray="4,2" fill="none"/>
+  <!-- Seeker cone fill -->
+  <path d="M 215 195 L 380 140 L 380 205 L 215 205 Z" fill="#d4a017" opacity="0.06"/>
+  <text x="310" y="185" text-anchor="middle" font-family="Courier New,monospace" font-size="8" fill="#d4a017" font-weight="bold">IR SEEKER FOV</text>
+
+  <!-- AIM-9 pursuit curve trajectory -->
+  <path d="M 220 198 Q 340 170 465 152" stroke="#8b0000" stroke-width="2.5" fill="none" marker-end="url(#arr-r)"/>
+  <!-- Missile symbol -->
+  <g transform="translate(340,178) rotate(-10)">
+    <polygon points="-8,0 8,0 6,-2 -6,-2" fill="#8b0000"/>
+    <polygon points="8,0 12,-3 12,3" fill="#8b0000"/>
+  </g>
+  <text x="330" y="210" font-family="Courier New,monospace" font-size="9" fill="#8b0000" font-weight="bold">AIM-9 PURSUIT CURVE</text>
+
+  <!-- Range arcs -->
+  <!-- Max range arc -->
+  <path d="M 200 120 A 180 180 0 0 1 200 280" stroke="#556b2f" stroke-width="1.5" stroke-dasharray="6,3" fill="none" transform="translate(280,0)"/>
+  <text x="500" y="88" font-family="Courier New,monospace" font-size="8" fill="#556b2f" font-weight="bold">MAX RANGE</text>
+  <text x="500" y="98" font-family="Courier New,monospace" font-size="8" fill="#556b2f">~5 NM</text>
+
+  <!-- Min range arc -->
+  <path d="M 200 170 A 40 40 0 0 1 200 230" stroke="#8b0000" stroke-width="1.5" stroke-dasharray="3,3" fill="none" transform="translate(40,0)"/>
+  <text x="225" y="165" font-family="Courier New,monospace" font-size="7.5" fill="#8b0000" font-weight="bold">MIN RNG</text>
+  <text x="225" y="175" font-family="Courier New,monospace" font-size="7.5" fill="#8b0000">~0.5 NM</text>
+
+  <!-- Rear hemisphere zone -->
+  <g transform="translate(480,150)">
+    <path d="M -60,-60 A 85 85 0 0 0 -60,60" stroke="#556b2f" stroke-width="1" stroke-dasharray="4,3" fill="none"/>
+  </g>
+  <text x="380" y="98" font-family="Courier New,monospace" font-size="8" fill="#556b2f" font-weight="bold">REAR HEMISPHERE</text>
+  <text x="380" y="108" font-family="Courier New,monospace" font-size="8" fill="#556b2f">(BEST Pk)</text>
+
+  <!-- Approach path -->
+  <line x1="60" y1="240" x2="185" y2="205" stroke="#1a1a1a" stroke-width="2" stroke-dasharray="8,4" marker-end="url(#arr)"/>
+  <text x="70" y="252" font-family="Courier New,monospace" font-size="9" fill="#1a1a1a" font-weight="bold">CLOSE TO</text>
+  <text x="70" y="262" font-family="Courier New,monospace" font-size="9" fill="#1a1a1a" font-weight="bold">REAR HEM.</text>
+
+  <!-- Seeker audio growl annotation -->
+  <g transform="translate(60,60)">
+    <rect x="0" y="0" width="175" height="55" rx="2" fill="rgba(85,107,47,0.1)" stroke="#556b2f" stroke-width="1"/>
+    <text x="88" y="16" text-anchor="middle" font-family="Courier New,monospace" font-size="8.5" fill="#556b2f" font-weight="bold">AUDIO GROWL TONE</text>
+    <text x="88" y="30" text-anchor="middle" font-family="Courier New,monospace" font-size="8" fill="#556b2f">Strong growl = good track</text>
+    <text x="88" y="42" text-anchor="middle" font-family="Courier New,monospace" font-size="8" fill="#556b2f" font-weight="bold">FIRE AND FORGET</text>
+  </g>
+
+  <!-- Coolant timer reminder -->
+  <g transform="translate(540,240)">
+    <rect x="0" y="0" width="150" height="40" rx="2" fill="rgba(139,0,0,0.08)" stroke="#8b0000" stroke-width="1"/>
+    <text x="75" y="16" text-anchor="middle" font-family="Courier New,monospace" font-size="8" fill="#8b0000" font-weight="bold">SW COOL: ON</text>
+    <text x="75" y="30" text-anchor="middle" font-family="Courier New,monospace" font-size="8" fill="#8b0000">Wait 3+ min before use</text>
+  </g>
+
+  <!-- Legend -->
+  <g transform="translate(580,330)">
+    <rect x="0" y="0" width="155" height="42" rx="2" fill="#f5f0e1" stroke="#b8956a" stroke-width="1"/>
+    <line x1="10" y1="12" x2="30" y2="12" stroke="#8b0000" stroke-width="2.5"/>
+    <text x="35" y="15" font-family="Courier New,monospace" font-size="7.5" fill="#8b0000">MISSILE PATH</text>
+    <line x1="10" y1="26" x2="30" y2="26" stroke="#d4a017" stroke-width="1.5" stroke-dasharray="4,2"/>
+    <text x="35" y="29" font-family="Courier New,monospace" font-size="7.5" fill="#d4a017">IR SEEKER FOV</text>
+    <path d="M 10 38 A 12 12 0 0 1 30 38" stroke="#556b2f" stroke-width="1.5" stroke-dasharray="6,3" fill="none"/>
+    <text x="35" y="41" font-family="Courier New,monospace" font-size="7.5" fill="#556b2f">RANGE ARC</text>
+  </g>
+
+  <!-- Border -->
+  <rect x="1" y="1" width="748" height="378" rx="2" fill="none" stroke="#b8956a" stroke-width="2"/>
+</svg>
